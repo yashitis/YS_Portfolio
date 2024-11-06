@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="output.css">
+    <Script src="matter.js" defer></Script>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body class=" text-white font-['nunito']  w-screen animated-background h-screen bg-gradient-to-r from-black via-blue-800 to-violet-900">
+  <!-- Animated background -->
+
+      <section class=" flex flex-col h-screen justify-between  ">
+        <Header class=" z-10 pointer-events-none flex items-center justify-between w-auto mt-4 max-w-screen-2xl mx-auto hover:scale-125">
+            <!-- YS logo -->
+            <div class="hover:scale-125 ease-in-out duration-100">
+              <img class="" src="assets/images/YS. LOGO..png" alt="" width="120px" height="120px">
+            </div>
+            <!-- Dark mode, light mode and more -->
+             <div class=" pointer-events-auto  max-w-80 flex flex-row gap-4">
+
+                <!-- sun icon -->
+                <!-- <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a> -->
+                <!-- moon icon -->
+                <!-- <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </a> -->
+
+             </div>
+        </Header>
+
+        <!-- BACKGROUND Animation -->
+        <div  class="absolute inset-0 hidden md:block max-w-full" id="wrapper-canvas">
+        </div>
+
+        <div class="flex -mt-36 relative ">
+            <div class="w-full px-4 max-w-screen-xl mx-auto"> 
+                <div class="relative ml-16 ">
+                    <!-- Heading -->
+                     
+                    <span>
+                      <h1 class="pointer-events-none text-[32px] md:text-[64px] font-['spartan'] mr-16">Yash Sharma</h1>
+                      <p class=" pointer-events-none text-[24px] font-['merriweather'] italic  mb-3 my-4 md:my-8  ">
+                         I am a  <span class="role"></span>
+                      </p>
+                    </span>
+                     
+
+                    <!-- Button of ABOUT ME  -->
+                    <button>
+                        <a href="#AboutMe" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border border-gray-400 rounded-md shadow-md group ">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:translate-x-0 ease ">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <!-- Gradients for button -->
+                            <!-- Top glass gradient -->                              
+                            <span class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>                             
+                            <!-- Bottom gradient -->                              
+                            <span class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>                             
+                            <!-- Left gradient -->                             
+                            <span class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>                              
+                            <!-- Right gradient --> 
+                            <span class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                                
+                            <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease ">About Me</span>
+                            <span class="relative invisible">About Me</span>
+                        </a>
+                    </button>
+
+                </div>
+                    <!-- developer image -->
+                    <img class="pointer-events-none absolute top-0 left-1/2 -translate-y-24 tanslate-x-1/3 md:w-[400px] w-[400px] h-auto" src="assets/images/bg.png" alt="">
+                </div>
+            </div>
+
+            <!-- icons on right side of the sreen  -->
+            <ul class="ml-auto space-y-7 text-[#b0b2c3] absolute right-8 top-80 "> 
+                <li>
+                    <a href="https://www.linkedin.com/in/" target="_blank">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                  <a href="https://github.com/yashitis" target="_blank">
+                      <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                          <path
+                          fill="currentColor"
+                              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                      </svg>
+                  </a>
+              </li>
+                <li>
+                    <a href="https://twitter.com/itisyashh" target="_blank">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                fill="currentColor"
+                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- button of LATEST WORK -->
+
+        <button class="mb-4">
+            <a href="#LatestWork" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border border-gray-400 rounded-md shadow-md group ">
+                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:translate-x-0 ease ">
+                    <svg class="w-6 h-6 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </span>
+                     <!-- Top glass gradient -->
+                    <span class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                     <!-- Bottom gradient -->
+                     <span class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                     <!-- Left gradient -->
+                     <span class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                     <!-- Right gradient -->
+                    <span class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                    
+                <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease ">Latest Work</span>
+                <span class=" after:content-[mb] after:absolute after:h-6 after:bg-[#444] after:-transate"></span>
+                <span class="relative invisible">Latest Work</span>
+            </a>
+        </button >
+     </section>
+
+  <!-- SECOND Section -->
+
+  
+  <section id="LatestWork" class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16">
+      <h2
+        class="bg-gradient-to-r from-transparent via-blue-800 to-transparent rounded-full text-3xl sm:text-[40px] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-b-2 border-[#1788ae]"
+      >
+        Latest Works
+      </h2>
+      <!-- <div class="border-b-2 border-[#1788ae]"></div> -->
+      <!-- First Project -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[80px] items-center sm:mt-20 relative"
+      >
+        <div
+          class="h-[1px] left-1/4 right-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full border-[3px] border-[#459bd5] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-125 ease-in-out duration-100 hidden sm:block"
+        ></div>
+        <a
+          href="https://study-notion-mern-stack.netlify.app/"
+          class="flex w-full relative justify-center sm:justify-start"
+        >
+          <div
+            class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200"
+          >
+            <img
+              class=" w-[450px] h-[290px] mr-auto absolute translate-y-1 -translate-x rounded-xl z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)] "
+              src="./assets/images/Screenshot 2024-10-28 100547.png"
+              alt=""
+            />
+            <img
+              class=" relative"
+              src="./mockups//macbook 1.png"
+            />
+            <span
+              class="flex group-hover:-top-14 ease-jump duration-200 bg-[#459bd5] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+              >Study Notion
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-external-link"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </span>
+          </div>
+        </a>
+        
+        <div class="w-full">
+          <h3 class="text-[#459bd5] font-bold text-2xl md:text-4xl">
+            Study Notion
+          </h3>
+          <span class="text-[#459bd5] text-base md:text-lg"
+            >(EdTech Platform)</span
+          >
+          <p class="text-justify text-sm md:text-base mt-2">
+            An EdTech platform enhances learning by connecting students and educators through interactive,
+            accessible online tools. It supports personalized learning, real-time collaboration, and progress
+            tracking, making education more engaging and effective.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 mt-2">
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #react.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #express.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #node.js
+            </li>
+            <!-- <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #swiper.js
+            </li> -->
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoDB
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoose
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #css
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #javascript
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #figma
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Second Project -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
+      >
+        <div class="order-2 sm:order-1 w-full">
+          <h3 class="text-[#ffe578] font-bold text-2xl md:text-4xl">
+            Razorpay
+          </h3>
+          <span class="text-[#ffe578] text-base md:text-lg"
+            >(Payment gateway)</span
+          >
+          <p class="text-justify text-sm md:text-base mt-2">
+            I developed a Razorpay clone using React and Tailwind CSS,
+            integrating smooth animations for an engaging, responsive user experience
+            .This project mirrors Razorpay’s interface and functionality, delivering
+            seamless digital payment solutions with a modern design.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 mt-2">
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #react.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #express.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #node.js
+            </li>
+            <!-- <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #swiper.js
+            </li> -->
+            <!-- <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoDB
+            </li> -->
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoose
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #css
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #javascript
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #figma
+            </li>
+          </ul>
+        </div>
+        <div
+          class="h-[1px] left-1/2 right-1/4 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full border-[3px] border-[#ffe578] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-125 ease-in-out duration-100 hidden sm:block"
+        ></div>
+      <a
+          href="https://codehelp-razorpay-clone.netlify.app/#"
+          class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start"
+        >
+        <div
+          class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200"
+        >
+          <img
+            class=" w-[450px] h-[290px] mr-auto absolute translate-y-1 -translate-x rounded-xl z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)] "
+            src="./assets/images/RAzorpay.png"
+            alt=""
+          />
+          <img
+            class=" relative"
+            src="./mockups//macbook 1.png"
+          />
+          <span
+            class="flex group-hover:-top-14 ease-jump duration-200 bg-[#459bd5] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+            >Razorpay
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-external-link"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+     </a>
+
+      <!-- <div
+      class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto"
+      >
+      <img
+      class="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
+              src="./assets/images/eazygrad.webp"
+              alt=""
+            />
+            <span
+              class="flex group-hover:-top-14 ease-jump duration-200 text-black bg-[#ffe578] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+              >EazyGrad
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-external-link"
+              >
+              <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </div> -->
+
+          
+          <!-- Third Project -->
+      </div>
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
+      >
+        <div
+          class="h-[1px] left-1/4 right-1/2 bg-[#1788ae] absolute top-1/2 hidden sm:block"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-125 ease-in-out duration-100 hidden sm:block"
+        ></div>
+        <a
+        href="https://study-notion-mern-stack.netlify.app/"
+        class="flex w-full relative justify-center sm:justify-start"
+      >
+        <div
+          class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200"
+        >
+          <img
+            class=" w-[450px] h-[290px] mr-auto absolute translate-y-1 -translate-x rounded-xl z-10 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)] "
+            src="./assets/images/Discord.png"
+            alt=""
+          />
+          <img
+            class=" relative"
+            src="./mockups//macbook 1.png"
+          />
+          <span
+            class="flex group-hover:-top-14 ease-jump duration-200 bg-[#459bd5] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2"
+            >Discord
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-external-link"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+        <div class="w-full">
+          <h3 class="text-[#fc815c] font-bold text-2xl md:text-4xl">
+            Discord
+          </h3>
+          <span class="text-[#fc815c] text-base md:text-lg"
+            >(Communication Platform)</span
+          >
+          <p class="text-justify text-sm md:text-base mt-2">
+            Discord is a free communication app that allows users to connect with
+            others through text, voice, and video calls:
+          </p>
+
+          <ul class="flex flex-wrap gap-2 mt-2">
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #react.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #express.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #node.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #swiper.js
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoDB
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #mongoose
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #css
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #javascript
+            </li>
+            <li
+              class="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base"
+            >
+              #figma
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      <!-- straight line -->
+      <div
+        class="w-[2px] hidden sm:block bg-[#1788ae] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"
+      ></div>
+
+      <!-- ME AND MY TECH STACk -->
+
+      <div id="AboutMe" id="skills" class="container skills-container ">
+        <div class="skill-fade-text"></div>
+
+        <div class="skill-container-left">
+          <h2 class="skill-heading">
+            <span class="caps font-['spartan']">M</span>e and
+            <br />
+            MyTech Stack
+          </h2>
+
+          <div class="skill-subHeading font-['spartan']">
+            <p>
+               Passionate and results-oriented Frontend Developer specializing in creating responsive,
+               interactive, and scalable web applications. Proficient in a modern tech stack, including
+                React for dynamic user interfaces, Node.js and Express for robust backend functionality,
+                and MongoDB for flexible data management. Skilled in HTML, CSS, and advanced JavaScript (ES6+),
+                with a strong focus on user experience, clean code, and performance optimization. Experienced 
+                in collaborating with cross-functional teams, translating complex requirements into seamless,
+                high-quality applications that drive user engagement and client satisfaction.
+            </p>
+            <ol>
+              <li>Efficiently managed client expectations and project requirements.</li>
+              <li>Meticulous approach to coding, ensuring high-quality, error-free deliverables.</li>
+              <li>Strong focus on maintaining clean, maintainable, and scalable code.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="skill-container-right">
+          <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
+
+          <img src="./images/stack/HTML.png" alt="" class="skills-logo" />
+          <img src="./images/stack/CSS.png" alt="" class="skills-logo" />
+          <img src="./images/stack/Javascript.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/React.png" alt="" class="skills-logo" />
+          <img src="./images/stack/NodeJs.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Next.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Redux.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Tailwind.png" alt="" class="skills-logo" />
+          <img src="./images/stack/Bootstrap.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/MaterialUI.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Express.png" alt="" class="skills-logo" />
+          <img src="./images/stack/Git.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Github.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Graphql.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/MongoDB.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Vercel.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/ChartJs.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Bash.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/Docker.svg" alt="" class="skills-logo" />
+          <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
+        </div>
+         
+      </div>
+
+      <!-- Lets Connect -->
+    </section>
+
+    <h2
+      class="bg-gradient-to-r from-transparent via-blue-800 to-transparent   text-3xl sm:text-[40px] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] sm:border-2 border-[#1788ae] rounded-md"
+    >
+      Let's Connect
+    </h2>
+    <!-- flex -->
+    <div class="flex flex-row justify-center mx-auto">
+      
+      <div class="flex flex-col md:flex-row items-center mt-10">
+        <!-- Image -->
+        <div class="w-full ">
+          <img src="./assets/images/contact-me.svg" alt="phone" />
+        </div>
+        <!-- Form -->
+        <form class="w-full mb-12" name="contactUS" netlify>
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Name</label
+          >
+          <div class="relative mb-4">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your Email</label
+          >
+          <div class="relative mb-4">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                />
+                <path
+                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Enter Your Email"
+            />
+          </div>
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Message</label
+          >
+          <div class="relative mb-4">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+            ></div>
+            <textarea
+              id="message"
+              name="message"
+              rows="8"
+              class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full text-white bg-[#1788ae] hover:bg-[#1280a4] focus:ring-4 focus:ring-[#4489a0] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+          >
+            Send
+          </button>
+          
+          <p class="text-xs text-gray-300">Yash Sharma © 2024</p>
+        </form>
+        
+        
+      </div>
+
+      
+      
+      
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+      <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script> -->
+      
+      
+      <!-- Moving text -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+      <script>
+        var typeData = new Typed(".role", {
+          strings: [
+            "Front End Developer",
+            "Full Stack Developer",
+            "Web Developer",
+            "Full Stack Developer",
+            "Learner",
+            "Coder",
+          ],
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 80,
+          backDelay: 1000,
+        });
+      </script>
+  </body> 
+  
+  </html>
+
+  
