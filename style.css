@@ -46,7 +46,45 @@
       gap:2rem;
       justify-content: center;
     }
+
   
+ /* Media Query */
+@media screen and (max-width: 850px) {
+  #developer{
+    width: 200px;
+    opacity: 90%;
+    position: absolute;
+    left: 125px;
+    top: 250px;
+
+  }
+  #hidden{
+    display:none;
+  } 
+
+  #projectImage1{
+    width:300px;
+    height: 200px;
+  }
+
+  #projectImage2{    
+    width:300px;
+    height: 200px;
+  } 
+
+  #projectImage3{
+    width:300px;
+    height: 200px;
+  }
+
+  /* #HeadingSection{
+    
+  } */
+}    
+
+
+    
+
 .skills-logo{
       width:90px;
       transition:all 0.5s;
